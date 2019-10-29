@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f0e545e-f0bf-4a8d-9509-c5358edef35e" name="Default Changelist" comment="">
+    <list default="true" id="2f0e545e-f0bf-4a8d-9509-c5358edef35e" name="Default Changelist" comment="Edit json">
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +24,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectId" id="1Ssj8rVoJ8cmbEaiV7cXOsBsIqj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -51,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.eslint:fix">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="WIDTH" value="400" />
@@ -83,16 +85,6 @@
       <method />
     </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="eject" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
       <method v="2" />
     </configuration>
     <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -128,7 +120,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.eslint:fix" />
-        <item itemvalue="npm.eject" />
         <item itemvalue="npm.eslint" />
       </list>
     </recent_temporary>
@@ -148,22 +139,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2f0e545e-f0bf-4a8d-9509-c5358edef35e" name="Default Changelist" comment="" />
+      <changelist id="409b5d4a-9e6c-4cde-bb99-d1c347de72bf" name="Default Changelist" comment="" />
       <created>1572332891644</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572332891644</updated>
       <workItem from="1572332894561" duration="860000" />
-      <workItem from="1572359047429" duration="858000" />
     </task>
-    <task id="LOCAL-00001" summary="Fixed error after run eslint">
-      <created>1572358343425</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1572358343425</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,14 +169,10 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed error after run eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed error after run eslint" />
-  </component>
   <component name="WindowStateProjectService">
-    <state width="250" height="487" key="Git.Branch.Popup" />
-    <state width="250" height="487" key="Git.Branch.Popup/1920.1080" />
-    <state width="250" height="487" key="Git.Branch.Popup@1920.1080@120dpi" />
+    <state width="243" height="480" key="Git.Branch.Popup" />
+    <state width="243" height="480" key="Git.Branch.Popup/1920.1080" />
+    <state width="243" height="480" key="Git.Branch.Popup@1920.1080@120dpi" />
   </component>
   <component name="masterDetails">
     <states>
