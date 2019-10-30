@@ -5,8 +5,8 @@
   },
   "extends": [
     "airbnb",
-    "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -25,6 +25,8 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [0]
+    "react/jsx-filename-extension": [0],
+    "indent": ["error", 2],
+    "react/jsx-indent": ["error", 2]
   }
 }
