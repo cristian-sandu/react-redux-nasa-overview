@@ -4,7 +4,9 @@
     "es6": true
   },
   "extends": [
-    "airbnb"
+    "airbnb",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -18,8 +20,11 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [0]
   }
 }
