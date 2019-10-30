@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f0e545e-f0bf-4a8d-9509-c5358edef35e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572445841318</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modified item for .editorconfig and eslinc">
+      <created>1572448188043</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572448188043</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +215,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Revert &quot;Fixed start issue&quot;&#10;&#10;This reverts commit 6dd44d88" />
     <MESSAGE value="Added .editorconfig file and fixed bug with tab on prettier and eslint after format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .editorconfig file and fixed bug with tab on prettier and eslint after format" />
+    <MESSAGE value="Modified item for .editorconfig and eslinc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified item for .editorconfig and eslinc" />
   </component>
   <component name="WindowStateProjectService">
     <state width="277" height="513" key="Git.Branch.Popup" />
