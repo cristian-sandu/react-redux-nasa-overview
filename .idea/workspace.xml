@@ -136,8 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.eslint:fix" />
         <item itemvalue="npm.prettier" />
+        <item itemvalue="npm.eslint:fix" />
         <item itemvalue="npm.eslint" />
         <item itemvalue="npm.eslint:fix" />
         <item itemvalue="npm.prettier" />
@@ -188,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572448188043</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modified item for .editorconfig and eslinc">
+      <created>1572448272148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572448272148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
