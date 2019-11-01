@@ -6,6 +6,7 @@
 .pnp.js
 
 .idea
+.idea/workspace.xml
 *.iml
 
 # testing
