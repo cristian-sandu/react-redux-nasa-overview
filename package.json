@@ -11,12 +11,14 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
-    "prettier": "1.18.2"
+    "husky": "^3.0.9",
+    "lint-staged": "^10.0.0-1",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +27,8 @@
     "eject": "react-scripts eject",
     "eslint": "eslint src/",
     "eslint:fix": "eslint --fix src/",
-    "prettier": "prettier --write \"./**/*.js\""
+    "prettier": "prettier --write \"./**/*.js\"",
+    "precommit": "lint-staged"
   },
   "browserslist": {
     "production": [
@@ -37,6 +40,22 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss,less,md,json}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
