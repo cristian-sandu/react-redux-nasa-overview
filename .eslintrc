@@ -26,15 +26,28 @@
   "plugins": [
     "react",
     "prettier",
-    "import-order"
+    "import-order",
+    "simple-import-sort"
   ],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0],
     "indent": ["error", 2],
     "react/jsx-indent": ["error", 2],
-    "import-order/import-order": 2
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
   },
+  "overrides": [
+    {
+      "files": "server/**/*.js",
+      "env": { "node": true },
+      "rules": {
+        "simple-import-sort/sort": "off",
+        "import/order": ["error", { "newlines-between": "always" }]
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "node": {
