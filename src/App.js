@@ -1,22 +1,16 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import Button from 'antd/es/button'
+import Icon from 'antd/es/icon'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Icon type="smile" theme="outlined" />
         <p>{`Edit <code>src/App.js</code> and save to reload.`}</p>
         <p> Hello </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button type="primary">Button</Button>
       </header>
     </div>
   )
