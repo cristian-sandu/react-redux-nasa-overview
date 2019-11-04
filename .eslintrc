@@ -5,8 +5,10 @@
   },
   "extends": [
     "airbnb",
+    "plugin:import-order/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "react-app"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -14,19 +16,30 @@
   },
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "ecmaVersion": 6,
+      "sourceType": "module"
     },
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "import-order"
   ],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0],
     "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2]
+    "react/jsx-indent": ["error", 2],
+    "import-order/import-order": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }

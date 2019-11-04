@@ -13,5 +13,7 @@ const store = createStore(
   initialState,
   composeWithDevTools(applyMiddleware(...middleware)),
 )
+
 sagaMiddleware.run(watchFetchingSaga)
+
 export default store
