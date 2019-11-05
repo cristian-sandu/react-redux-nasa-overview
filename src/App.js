@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { EMPTY_STRING } from 'common/constants'
-import { UTIL } from 'utils'
+import Button from 'ui-kit/button'
 
 import logo from './logo.svg'
 import './App.css'
@@ -11,16 +10,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>{`Edit <code>src/App.js</code> and save to reload.${UTIL} ${EMPTY_STRING}`}</p>
+        <p>{`Edit <code>src/App.js</code> and save to reload.`}</p>
         <p> Hello </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button title="Test" />
       </header>
     </div>
   )
