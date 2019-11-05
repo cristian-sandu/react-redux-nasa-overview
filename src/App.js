@@ -1,6 +1,9 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+
+import { EMPTY_STRING } from 'common/constants' //eslint-disable-line
+import { UTIL } from 'utils' //eslint-disable-line
+import logo from './logo.svg'
 
 function App() {
   return (
