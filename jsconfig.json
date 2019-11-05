@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
+      "include": ["src"],
       "common": ["src/common/*"],
       "utils": ["src/utils/*"],
       "ui-kit": ["src/ui-kit/*"]

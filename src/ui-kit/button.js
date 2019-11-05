@@ -1,9 +1,11 @@
 /* eslint-disable */
-
 import React from 'react'
+import { Button as AntdButton } from 'antd'
 
-import { Button } from 'antd'
-
-export default ({ title }) => (
-  <Button style={{ fontSize: '25px' }}> {title} </Button>
+const Button = ({ title }) => (
+  <span>
+    <AntdButton style={{ fontSize: '25px' }}> {title} </AntdButton>
+  </span>
 )
+
+export default Button
