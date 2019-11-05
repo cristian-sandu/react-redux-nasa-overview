@@ -5,8 +5,10 @@
   },
   "extends": [
     "airbnb",
+    "prettier",
     "plugin:prettier/recommended",
-    "prettier"
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -21,12 +23,34 @@
   },
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0],
     "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2]
+    "react/jsx-indent": ["error", 2],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
