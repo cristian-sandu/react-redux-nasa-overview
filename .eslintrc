@@ -28,9 +28,17 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [0],
-    "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2],
+    "react/jsx-filename-extension": [
+      0
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
     "import/order": [
       "error",
       {
@@ -49,7 +57,9 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["src"]
+        "paths": [
+          "src"
+        ]
       }
     }
   }

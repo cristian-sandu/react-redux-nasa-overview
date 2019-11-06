@@ -3,7 +3,8 @@
     "baseUrl": "src",
     "paths": {
       "common": ["src/common/*"],
-      "utils": ["src/utils/*"]
+      "utils": ["src/utils/*"],
+      "ui-kit": ["src/ui-kit/*"]
     }
   }
 }
