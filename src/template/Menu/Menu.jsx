@@ -1,9 +1,9 @@
 import React from 'react'
 import { Icon, Menu } from 'antd'
 
-import logo from '../../../assets/images/logo.png'
+import logo from '../../assets/images/logo.png'
 import '../scss/Menu.scss'
-import { SITE_NAME } from '../../constants'
+import { SITE_NAME } from '../../common/constants'
 // import Search from '../../../ui-kit/Search/Search'
 
 const { SubMenu } = Menu

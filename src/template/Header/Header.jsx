@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-
 import { connect } from 'react-redux'
 
-import '../scss/Hedaer.scss'
-import { requestImages } from '../../../redux/action'
 import Preloader from 'ui-kit/preloader/preloader'
+
+import { requestImages } from '../../redux/action'
+
+import '../scss/Hedaer.scss'
 
 const Header = props => {
   const { onImgFetch, isLoading } = props
@@ -20,7 +21,7 @@ const Header = props => {
   return (
     <div className="wrapper">
       <div className="wrapper__bg">
-        <img src={image.url} alt=""/>
+        <img src={image.url} alt="" />
       </div>
     </div>
   )
@@ -37,4 +38,7 @@ const mapDispatchToProps = {
   onImgFetch: requestImages,
 }
 
-export default connect( mapStateToProps,  mapDispatchToProps ) (Header)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Header)

@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.scss'
 
-import Header from './common/components/Header/Header'
-import Footer from './common/components/Footer/Footer'
-import Menu from './common/components/Menu/Menu'
-import Content from './common/components/Content/Content'
+import Header from './template/Header/Header'
+import Footer from './template/Footer/Footer'
+import Menu from './template/Menu/Menu'
+import Content from './template/Content/Content'
 
 const App = () => {
   return (
