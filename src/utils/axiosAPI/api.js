@@ -1,13 +1,13 @@
 import axios from 'axios'
 
-const baseURL = 'https://images-api.nasa.gov/'
-// const api_key = '85s01FagZqMWrIPC4liDKVoAcDQNmybGu9hbh3rm'
+const baseURL = 'https://api.nasa.gov/'
+const apiKEY = 'api_key=aCNwLvVe8gykdUxPUggWkOt3lB3RzzHoVHTy4ZQZ'
 
 export const imageAPI = {
   getDailyImage() {
     return axios
-      .get(`${baseURL}asset/iss061e028279`)
-      .then(response => response.data.collection.items)
+      .get(`${baseURL}planetary/apod?${apiKEY}`)
+      .then(response => response.data)
   },
 }
 

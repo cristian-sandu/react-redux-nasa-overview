@@ -15,14 +15,12 @@ const Header = props => {
   if (isLoading) {
     return <Preloader />
   }
-
-  const image = props.imageDaily.images
-  const dailyImage = image[1] && image[1].href
+  const image = props.imageDaily.image
 
   return (
     <div className="wrapper">
       <div className="wrapper__bg">
-        <img src={dailyImage} alt=""/>
+        <img src={image.url} alt=""/>
       </div>
     </div>
   )
@@ -34,8 +32,6 @@ const mapStateToProps = state => {
     isLoading: state.imgDailyPage.isLoading,
   }
 }
-
-// Header.defaultProps = {image.href: null}
 
 const mapDispatchToProps = {
   onImgFetch: requestImages,

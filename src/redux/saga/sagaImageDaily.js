@@ -11,12 +11,12 @@ function* fetchImages() {
     },
   })
 
-  const images = yield call(imageAPI.getDailyImage)
+  const image = yield call(imageAPI.getDailyImage)
 
   yield put({
     type: FETCH_IMAGES_SUCCESS,
     payload: {
-      images,
+      image,
       isLoading: false,
     },
   })
