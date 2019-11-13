@@ -4,10 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import './App.scss'
 import ImgGallery from 'common/components/img-gallery/'
 
-import Header from './templates/Header'
-import Footer from './templates/Footer'
-import MainMenu from './templates/Menu'
-import Nasa from './templates/Nasa'
+import { Header, Footer, MainMenu, Nasa } from './templates'
 
 const App = () => {
   return (
