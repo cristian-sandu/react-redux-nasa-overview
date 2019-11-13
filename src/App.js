@@ -4,20 +4,17 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import './App.scss'
 import ImgGallery from 'common/components/img-gallery/'
 
-import { Header, Footer, MainMenu, Nasa } from './templates'
+import { Header, Footer, MainMenu } from './templates'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <MainMenu />
-        <div className="container-wrapper">
-          <Route path="/gallery/" component={ImgGallery} />
-          <Route exact path="/" component={Header} />
-          <Route exact path="/" component={Nasa} />
-        </div>
-        <Footer />
+      <MainMenu />
+      <div className="container-wrapper">
+        <Route exact path="/" component={Header} />
+        <Route path="/gallery/" component={ImgGallery} />
       </div>
+      <Footer />
     </BrowserRouter>
   )
 }
