@@ -7,7 +7,7 @@ import { SEARCH_DEFAULT_TEXT } from '../constants'
 
 const { Search } = Input
 
-export default () => {
+const Search = () => {
   return (
     <div>
       <Search
@@ -18,3 +18,5 @@ export default () => {
     </div>
   )
 }
+
+export default Search

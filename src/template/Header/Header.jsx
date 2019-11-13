@@ -3,12 +3,11 @@ import { connect } from 'react-redux'
 
 import Preloader from 'ui-kit/preloader/preloader'
 
-import { requestImages } from '../../redux/action'
+import { requestImages } from '../../redux/actions'
 
 import '../scss/Hedaer.scss'
 
-const Header = props => {
-  const { onImgFetch, isLoading } = props
+const Header = ({ imageDaily, onImgFetch, isLoading }) => {
   useEffect(() => {
     onImgFetch()
   }, [onImgFetch])
@@ -16,8 +15,7 @@ const Header = props => {
   if (isLoading) {
     return <Preloader />
   }
-  const image = props.imageDaily.image
-
+  const { image } = imageDaily
   return (
     <div className="wrapper">
       <div className="wrapper__bg">
@@ -27,12 +25,10 @@ const Header = props => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    imageDaily: state.imgDailyPage,
-    isLoading: state.imgDailyPage.isLoading,
-  }
-}
+const mapStateToProps = state => ({
+  imageDaily: state.imgDailyPage,
+  isLoading: state.imgDailyPage.isLoading,
+})
 
 const mapDispatchToProps = {
   onImgFetch: requestImages,

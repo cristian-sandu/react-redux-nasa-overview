@@ -1,14 +1,15 @@
 import React from 'react'
 import { Icon, Menu } from 'antd'
 
+import { SITE_NAME } from 'common/constants'
+
 import logo from '../../assets/images/logo.png'
 import '../scss/Menu.scss'
-import { SITE_NAME } from '../../common/constants'
 // import Search from '../../../ui-kit/Search/Search'
 
 const { SubMenu } = Menu
 
-export default () => {
+const MainMenu = () => {
   return (
     <div className="menu__wrapper">
       <div className="menu__container">
@@ -47,3 +48,5 @@ export default () => {
     </div>
   )
 }
+
+export default MainMenu

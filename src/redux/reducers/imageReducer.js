@@ -1,6 +1,6 @@
 const initialState = {}
 
-// temporary delete unused parameter action for eslint
+// temporary delete unused parameter actions for eslint
 const imageReducer = (state = initialState) => {
   return state
 }
