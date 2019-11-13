@@ -16,6 +16,7 @@ const Header = ({ imageDaily, onImgFetch, isLoading }) => {
   if (isLoading) {
     return <Preloader />
   }
+
   const { image } = imageDaily
   return (
     <div>
