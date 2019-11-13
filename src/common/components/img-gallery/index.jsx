@@ -6,25 +6,28 @@ import noImage from 'assets/images/no-image.png'
 
 const ImgGallery = () => (
   <div className={style.container}>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
-    <div className={`${style['container__content']}`}>
+    <div className={style.container__content}>
+      <img src={noImage} alt="" />
+    </div>
+    <div className={style.container__content}>
       <img src={noImage} alt="" />
     </div>
   </div>

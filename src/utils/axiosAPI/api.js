@@ -1,9 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://api.nasa.gov/'
-const GALLERY_URL = 'https://images-api.nasa.gov'
-
-const API_KEY = 'api_key=aCNwLvVe8gykdUxPUggWkOt3lB3RzzHoVHTy4ZQZ'
+import { API_KEY, BASE_URL, GALLERY_URL } from './constants'
 
 export const imageAPI = {
   getDailyImage() {

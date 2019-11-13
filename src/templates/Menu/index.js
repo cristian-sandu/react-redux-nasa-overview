@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
 import { Icon, Menu } from 'antd'
 
 import { SITE_NAME } from 'common/constants'
