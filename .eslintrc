@@ -3,13 +3,21 @@
     "browser": true,
     "es6": true
   },
+
   "extends": [
-    "airbnb",
+  "airbnb",
+  "prettier",
+  "plugin:prettier/recommended",
+  "plugin:import/errors",
+  "plugin:import/warnings"
+],
+
+  "plugins": [
+    "react",
     "prettier",
-    "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+    "import"
   ],
+
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -21,11 +29,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "prettier",
-    "import"
-  ],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
@@ -33,7 +36,10 @@
     ],
     "indent": [
       "error",
-      2
+      2,
+      {
+        "SwitchCase": 1
+      }
     ],
     "react/jsx-indent": [
       "error",

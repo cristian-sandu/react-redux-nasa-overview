@@ -1,0 +1,22 @@
+.container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  &__content {
+    transition: box-shadow 0.3s;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left;
+    cursor: pointer;
+    p {
+      font-size: 16px;
+    }
+  }
+  &__content:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  }
+}
