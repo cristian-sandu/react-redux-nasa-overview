@@ -5,8 +5,8 @@ import { bool, func, string } from 'prop-types'
 import Preloader from 'ui-kit/preloader/preloader'
 
 import { requestImages } from '../../redux/actions'
-import { Nasa } from '../index'
 import '../scss/Hedaer.scss'
+import Nasa from '../Nasa'
 
 const Header = ({ imageDaily, onImgFetch, isLoading }) => {
   useEffect(() => {
