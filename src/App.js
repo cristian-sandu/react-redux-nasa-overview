@@ -1,19 +1,24 @@
 import React from 'react'
-import './App.scss'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import Header from './template/Header/Header'
-import Footer from './template/Footer/Footer'
-import Menu from './template/Menu/Menu'
-import Content from './template/Content/Content'
+import './App.scss'
+import ImgGallery from 'common/components/img-gallery/'
+
+import { Header, Footer, MainMenu, Nasa } from './templates'
 
 const App = () => {
   return (
-    <div>
-      <Menu />
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div>
+        <MainMenu />
+        <div className="container-wrapper">
+          <Route path="/gallery/" component={ImgGallery} />
+          <Route exact path="/" component={Header} />
+          <Route exact path="/" component={Nasa} />
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 

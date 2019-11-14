@@ -1,9 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { Icon, Menu } from 'antd'
 
 import { SITE_NAME } from 'common/constants'
-
-import logo from '../../assets/images/logo.png'
+import logo from 'assets/images/logo.png'
 import '../scss/Menu.scss'
 // import Search from '../../../ui-kit/Search/Search'
 
@@ -14,12 +14,16 @@ const MainMenu = () => {
     <div className="menu__wrapper">
       <div className="menu__container">
         <div className="menu__container-logo">
-          <img src={logo} alt={SITE_NAME} />
+          <NavLink to="/">
+            <img src={logo} alt={SITE_NAME} />
+          </NavLink>
         </div>
         <Menu className="ui-kit__menu" mode="horizontal" theme="dark">
           <Menu.Item key="gallery">
-            <Icon type="picture" />
-            Gallery
+            <NavLink to="/gallery">
+              <Icon type="picture" />
+              Gallery
+            </NavLink>
           </Menu.Item>
           <Menu.Item key="video">
             <Icon type="video-camera" />

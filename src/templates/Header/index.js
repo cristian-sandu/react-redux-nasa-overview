@@ -1,3 +1,5 @@
+/* eslint react/prop-types: 0 */
+
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 

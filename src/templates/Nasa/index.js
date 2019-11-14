@@ -1,9 +1,9 @@
 import React from 'react'
 import { Col, Row } from 'antd'
 
-import '../scss/Content.scss'
+import '../scss/Nasa.scss'
 
-const Content = () => (
+const Nasa = () => (
   <div className="container">
     <Row gutter={[16, 32]}>
       <Col span={8} className="container__content">
@@ -34,4 +34,4 @@ const Content = () => (
   </div>
 )
 
-export default Content
+export default Nasa
