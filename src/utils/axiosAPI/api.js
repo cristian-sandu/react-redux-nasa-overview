@@ -7,7 +7,7 @@ const { BASE, GALLERY } = APP_URL
 export const imageAPI = {
   getDailyImage() {
     return axios
-      .get(`${BASE}planetary/apod?${API_KEY}`)
+      .get(`${BASE}/planetary/apod?${API_KEY}`)
       .then(response => response.data.url)
   },
 

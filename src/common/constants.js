@@ -3,7 +3,7 @@ export const API_KEY = 'api_key=aCNwLvVe8gykdUxPUggWkOt3lB3RzzHoVHTy4ZQZ'
 
 // API URL
 export const APP_URL = {
-  BASE: 'https://api.nasa.gov/',
+  BASE: 'https://api.nasa.gov',
   GALLERY: 'https://images-api.nasa.gov',
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { bool, func, string } from 'prop-types'
 
-import Preloader from 'ui-kit/preloader/preloader'
+import { Preloader } from 'ui-kit'
 
 import { requestImages } from '../../redux/actions'
 import '../scss/Hedaer.scss'

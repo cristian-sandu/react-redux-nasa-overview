@@ -2,8 +2,8 @@ import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { PATH_URL } from 'common/constants'
-import ImgGallery from 'common/components/img-gallery/'
-import Preloader from 'ui-kit/preloader/preloader'
+import ImageGallery from 'common/components/img-gallery/'
+import { Preloader } from 'ui-kit'
 
 import { Footer, Header, MainMenu } from './templates'
 import './App.scss'
@@ -18,7 +18,7 @@ const App = () => {
         <div className="container-wrapper">
           <Switch>
             <Route exact path={HOME} component={Header} />
-            <Route path={GALLERY} component={ImgGallery} />
+            <Route path={GALLERY} component={ImageGallery} />
           </Switch>
         </div>
         <Footer />
