@@ -1,6 +1,6 @@
-import Header from './Header'
-import Footer from './Footer'
-import MainMenu from './Menu'
-import Nasa from './Nasa'
+import { lazy } from 'react'
 
-export { Header, Footer, MainMenu, Nasa }
+export const Header = lazy(() => import('./Header'))
+export const Footer = lazy(() => import('./Footer'))
+export const MainMenu = lazy(() => import('./Menu'))
+export const Nasa = lazy(() => import('./Nasa'))

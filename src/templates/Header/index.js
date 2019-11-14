@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { bool, func, instanceOf } from 'prop-types'
+import { bool, func, string } from 'prop-types'
 
 import Preloader from 'ui-kit/preloader/preloader'
 
 import { requestImages } from '../../redux/actions'
+import { Nasa } from '../index'
 import '../scss/Hedaer.scss'
-import Nasa from '../Nasa'
 
 const Header = ({ imageDaily, onImgFetch, isLoading }) => {
   useEffect(() => {
@@ -17,12 +17,11 @@ const Header = ({ imageDaily, onImgFetch, isLoading }) => {
     return <Preloader />
   }
 
-  const { image } = imageDaily
   return (
     <div>
       <div className="wrapper">
         <div className="wrapper__bg">
-          <img src={image.url} alt="" />
+          <img src={imageDaily} alt="" />
         </div>
       </div>
       <Nasa />
@@ -31,7 +30,7 @@ const Header = ({ imageDaily, onImgFetch, isLoading }) => {
 }
 
 const mapStateToProps = state => ({
-  imageDaily: state.imgDailyPage,
+  imageDaily: state.imgDailyPage.image,
   isLoading: state.imgDailyPage.isLoading,
 })
 
@@ -40,7 +39,7 @@ const mapDispatchToProps = {
 }
 
 Header.propTypes = {
-  imageDaily: instanceOf(Object).isRequired,
+  imageDaily: string.isRequired,
   onImgFetch: func.isRequired,
   isLoading: bool.isRequired,
 }

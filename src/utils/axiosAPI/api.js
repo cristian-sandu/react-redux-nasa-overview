@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-import { API_KEY, BASE_URL, GALLERY_URL } from './constants'
+import { API_KEY, BASE_URL, GALLERY_URL } from 'common/constants'
 
 export const imageAPI = {
   getDailyImage() {
     return axios
       .get(`${BASE_URL}planetary/apod?${API_KEY}`)
-      .then(response => response.data)
+      .then(response => response.data.url)
   },
 
   getGallery() {

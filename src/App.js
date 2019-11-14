@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import './App.scss'
+import { GALLERY_PATH, MAIN_PATH } from 'common/constants'
 import ImgGallery from 'common/components/img-gallery/'
 
-import { Header, Footer, MainMenu } from './templates'
+import Preloader from './ui-kit/preloader/preloader'
+import './App.scss'
+import { Footer, Header, MainMenu } from './templates'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <MainMenu />
-      <div className="container-wrapper">
-        <Route exact path="/" component={Header} />
-        <Route path="/gallery/" component={ImgGallery} />
-      </div>
-      <Footer />
+      <Suspense fallback={<Preloader />}>
+        <MainMenu />
+        <div className="container-wrapper">
+          <Route exact path={MAIN_PATH} component={Header} />
+          <Route path={GALLERY_PATH} component={ImgGallery} />
+        </div>
+        <Footer />
+      </Suspense>
     </BrowserRouter>
   )
 }

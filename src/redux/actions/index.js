@@ -1,17 +1,16 @@
 import { FETCH_IMAGES_SUCCESS, IS_LOADING, REQUEST_IMAGES } from '../types'
 
-export const fetchImagesSuccess = ({ payload: image }) => ({
-  type: FETCH_IMAGES_SUCCESS,
+export const toggleIsLoading = isLoading => ({
+  type: IS_LOADING,
   payload: {
-    image,
-    isLoading: false,
+    isLoading,
   },
 })
 
-export const toggleIsLoading = () => ({
-  type: IS_LOADING,
+export const fetchImagesSuccess = imageURL => ({
+  type: FETCH_IMAGES_SUCCESS,
   payload: {
-    isLoading: true,
+    imageURL,
   },
 })
 

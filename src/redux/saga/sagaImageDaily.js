@@ -5,11 +5,12 @@ import { REQUEST_IMAGES } from '../types'
 import { fetchImagesSuccess, toggleIsLoading } from '../actions'
 
 function* fetchImages() {
-  yield put(toggleIsLoading({ isLoading: true }))
+  yield put(toggleIsLoading(true))
 
-  const image = yield call(imageAPI.getDailyImage)
+  const imageURL = yield call(imageAPI.getDailyImage)
+  yield put(fetchImagesSuccess(imageURL))
 
-  yield put(fetchImagesSuccess({ payload: image }))
+  yield put(toggleIsLoading(false))
 }
 
 export default function* watchFetchingData() {
