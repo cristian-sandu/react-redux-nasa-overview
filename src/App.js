@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { PATH_URL } from 'common/constants'
-import ImageGallery from 'common/components/img-gallery/'
+import { ImageGallery } from 'common/components'
 import { Preloader } from 'ui-kit'
 
 import { Footer, Header, MainMenu } from './templates'
