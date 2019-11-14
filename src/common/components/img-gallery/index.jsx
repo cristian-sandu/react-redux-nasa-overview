@@ -4,7 +4,7 @@ import style from 'common/components/scss/ImgGallery.module.scss'
 
 import noImage from 'assets/images/no-image.png'
 
-const ImgGallery = () => (
+const ImageGallery = () => (
   <div className={style.container}>
     <div className={style.container__content}>
       <img src={noImage} alt="" />
@@ -33,4 +33,4 @@ const ImgGallery = () => (
   </div>
 )
 
-export default ImgGallery
+export default ImageGallery

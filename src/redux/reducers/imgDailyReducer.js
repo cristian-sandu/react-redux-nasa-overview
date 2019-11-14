@@ -1,7 +1,9 @@
+import { EMPTY_STRING } from 'common/constants'
+
 import { FETCH_IMAGES_SUCCESS, IS_LOADING } from '../types'
 
 const initialState = {
-  image: {},
+  image: { EMPTY_STRING },
   isLoading: false,
 }
 
@@ -10,14 +12,11 @@ const imageDailyReducer = (state = initialState, action) => {
     case FETCH_IMAGES_SUCCESS:
       return {
         ...state,
-        image: action.payload.image,
-        isLoading: action.payload.isLoading,
+        image: action.payload.imageURL,
       }
-
     case IS_LOADING:
       return {
         ...state,
-        image: action.payload.image,
         isLoading: action.payload.isLoading,
       }
 
