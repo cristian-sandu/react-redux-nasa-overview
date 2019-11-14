@@ -1,7 +1,7 @@
 import { FETCH_IMAGES_SUCCESS, IS_LOADING } from '../types'
 
 const initialState = {
-  image: null,
+  image: '',
   isLoading: false,
 }
 
