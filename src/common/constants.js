@@ -1,7 +1,13 @@
 // Axios constant
 export const API_KEY = 'api_key=aCNwLvVe8gykdUxPUggWkOt3lB3RzzHoVHTy4ZQZ'
 
+// Daily Image
 export const EMPTY_STRING = ''
+
+// Search
+export const SEARCH_URL = {
+  MEDIA_TYPE: 'image',
+}
 
 // API URL
 export const APP_URL = {

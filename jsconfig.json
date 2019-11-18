@@ -5,7 +5,9 @@
       "common": ["src/common/*"],
       "utils": ["src/utils/*"],
       "ui-kit": ["src/ui-kit/*"],
-      "assets": ["src/assets/*"]
+      "assets": ["src/assets/*"],
+      "redux": ["src/redux/*"],
+      "templates": ["src/templates/*"]
     }
   }
 }

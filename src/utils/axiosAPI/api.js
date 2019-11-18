@@ -1,8 +1,9 @@
 import axios from 'axios'
 
-import { API_KEY, APP_URL } from 'common/constants'
+import { API_KEY, APP_URL, SEARCH_URL } from 'common/constants'
 
 const { BASE, GALLERY } = APP_URL
+const { MEDIA_TYPE } = SEARCH_URL
 
 export const imageAPI = {
   getDailyImage() {
@@ -11,8 +12,12 @@ export const imageAPI = {
       .then(response => response.data.url)
   },
 
-  getGallery() {
-    return axios.get(`${GALLERY}/asset/`).then(response => response.data)
+  getGallerySearchDef(searchText, page, yearStart, yearEnd) {
+    return axios
+      .get(
+        `${GALLERY}/search?q=${searchText}&page=${page}&media_type=${MEDIA_TYPE}&year_start=${yearStart}&year_end=${yearEnd}`,
+      )
+      .then(response => response.data.collection.items)
   },
 }
 

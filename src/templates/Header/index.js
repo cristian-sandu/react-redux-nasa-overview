@@ -16,7 +16,6 @@ const Header = ({ imageDaily, onImgFetch, isLoading }) => {
   if (isLoading) {
     return <Preloader />
   }
-
   return (
     <div>
       <div className="wrapper">

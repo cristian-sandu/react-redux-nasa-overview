@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-import imageReducer from './imageReducer'
 import imageDailyReducer from './imgDailyReducer'
+import imagesGalleryReducer from './imgGalleryReducer'
 
 const rootReducers = combineReducers({
   imgDailyPage: imageDailyReducer,
-  imagePage: imageReducer,
+  imagesGalleryPage: imagesGalleryReducer,
 })
 
 export default rootReducers
