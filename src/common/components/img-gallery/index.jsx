@@ -39,7 +39,7 @@ const ImagesGallery = ({
       <div className={style.wrapper__container}>
         {image.map(i => (
           <div className={style.wrapper__container__content}>
-            <img src={i.href ? i.href : noImage} alt="" />
+            <img src={i.href || noImage} alt="" />
           </div>
         ))}
       </div>
