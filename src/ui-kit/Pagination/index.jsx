@@ -1,36 +1,41 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Pagination } from 'antd'
+import { number } from 'prop-types'
 
 import { setCurrentPage } from 'redux/actions'
-import { Pagination } from 'antd'
+
 import './pagination.scss'
 
-const PaginationKit = ({setCurrentPage, pageCurrent}) => {
-
-  const setCurrentPageHandler = (page) => {
-    setCurrentPage(page)
+const PaginationKit = ({ setCurrentPage, pageCurrent, totalPage }) => {
+  const setCurrentPageHandler = pageIndex => {
+    setCurrentPage(pageIndex)
   }
 
   return (
     <div>
       <Pagination
         simple
-        className='ui-kit__pagination'
+        className="ui-kit__pagination"
         onChange={setCurrentPageHandler}
         defaultCurrent={pageCurrent}
-        total={500}
+        total={totalPage}
       />
-
     </div>
   )
 }
 
 const mapDispatchToProps = {
-  setCurrentPage
+  setCurrentPage,
 }
 
-// PaginationKit.propTypes = {
-// }
+PaginationKit.propTypes = {
+  setCurrentPage: number.isRequired,
+  pageCurrent: number.isRequired,
+  totalPage: number.isRequired,
+}
 
-
-export default connect(null, mapDispatchToProps)(PaginationKit)
+export default connect(
+  null,
+  mapDispatchToProps,
+)(PaginationKit)

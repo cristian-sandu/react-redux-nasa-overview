@@ -5,6 +5,7 @@ import { PATH_URL } from 'common/constants'
 import { ImageGallery } from 'common/components'
 import { Preloader } from 'ui-kit'
 import { Footer, Header, MainMenu } from 'templates'
+
 import './App.scss'
 
 const { HOME, GALLERY } = PATH_URL

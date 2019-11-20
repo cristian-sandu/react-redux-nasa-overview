@@ -1,23 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { func, number } from 'prop-types'
+import { Slider } from 'antd'
 
 import { getEndYear, getStartYear } from 'redux/selectors'
 import { setCurrentYearsDate, setCurrentYearsAfter } from 'redux/actions'
-
-import { number } from 'prop-types'
-
-import { Slider } from 'antd'
+import { getYear } from 'common/function'
 
 import './sliderYears.scss'
 
-
-const SliderYears = ({ setCurrentYearsDate, setCurrentYearsAfter, startYear, endYear }) => {
-
-  const currentDate = new Date()
-  const currentYear = currentDate.getFullYear()
-
-  const setYearsHandler = (value) => {
-      setCurrentYearsDate(value)
+const SliderYears = ({
+  setCurrentYearsDate,
+  setCurrentYearsAfter,
+  startYear,
+  endYear,
+}) => {
+  const setYearsHandler = value => {
+    setCurrentYearsDate(value)
   }
 
   const setYearsAfterChange = value => {
@@ -27,12 +26,12 @@ const SliderYears = ({ setCurrentYearsDate, setCurrentYearsAfter, startYear, end
   return (
     <div>
       <Slider
-        className='ui-kit__sliderYears'
+        className="ui-kit__sliderYears"
         range
         delay
         step={1}
         min={1920}
-        max={currentYear}
+        max={getYear()}
         defaultValue={[startYear, endYear]}
         onChange={setYearsHandler}
         onAfterChange={setYearsAfterChange}
@@ -40,7 +39,6 @@ const SliderYears = ({ setCurrentYearsDate, setCurrentYearsAfter, startYear, end
     </div>
   )
 }
-
 
 const mapStateToProps = state => ({
   startYear: getStartYear(state),
@@ -55,6 +53,10 @@ const mapDispatchToProps = {
 SliderYears.propTypes = {
   startYear: number.isRequired,
   endYear: number.isRequired,
-
+  setCurrentYearsDate: func.isRequired,
+  setCurrentYearsAfter: func.isRequired,
 }
-export default connect(mapStateToProps, mapDispatchToProps)(SliderYears)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SliderYears)
