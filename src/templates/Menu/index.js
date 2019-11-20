@@ -7,8 +7,6 @@ import { PATH_URL } from 'common/constants'
 import logo from 'assets/images/logo.png'
 import '../scss/Menu.scss'
 
-// import Search from '../../../ui-kit/Search/Search'
-
 const { SubMenu } = Menu
 
 const { GALLERY } = PATH_URL
@@ -52,7 +50,6 @@ const MainMenu = () => {
           </SubMenu>
         </Menu>
       </div>
-      {/* <Search /> */}
     </div>
   )
 }

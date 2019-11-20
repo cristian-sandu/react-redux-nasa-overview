@@ -13,6 +13,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
+    "redux-debounced": "^0.5.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.1.1"
   },
@@ -36,8 +37,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "eslint": "eslint src/",
-    "eslint:fix": "eslint --fix src/",
+    "eslint": "eslint \"./**/*.{js,jsx}\"",
+    "eslint:fix": "eslint --fix \"./**/*.{js,jsx}\"",
     "prettier": "prettier --write \"./**/*.{js,jsx}\"",
     "precommit": "lint-staged"
   },
