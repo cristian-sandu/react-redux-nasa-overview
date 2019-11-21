@@ -7,8 +7,9 @@ import { SITE_NAME } from '../../constants'
 
 import style from './ImageGallery.module.scss'
 
+const timesTampKey = require('uuid/v1')
+
 const ImageGallery = ({ sourceImage }) => {
-  const timesTampKey = require('uuid/v1')
   return (
     <div className={style.wrapper__container}>
       {sourceImage.map(i => (
