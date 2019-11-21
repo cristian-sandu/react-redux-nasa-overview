@@ -30,11 +30,12 @@ export const requestImages = () => ({
   type: REQUEST_IMAGES,
 })
 
-// Images Gallery
-export const fetchImagesGallerySuccess = imagesItems => ({
+// ImageGallery Gallery
+export const fetchImagesGallerySuccess = (imagesItems, totalItems) => ({
   type: FETCH_IMAGES_GALLERY_SUCCESS,
   payload: {
     imagesItems,
+    totalItems,
   },
 })
 
@@ -51,10 +52,10 @@ export const setSearchWord = searchText => ({
 })
 
 // Pagination
-export const setCurrentPage = page => ({
+export const setCurrentPage = pageIndex => ({
   type: SET_CURRENT_PAGE,
   payload: {
-    page,
+    pageIndex,
   },
 })
 

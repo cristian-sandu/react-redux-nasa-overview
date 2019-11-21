@@ -1,8 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
-
-import { setSearchWord } from 'redux/actions'
-
 import { func } from 'prop-types'
 import { Input } from 'antd'
 
@@ -11,9 +7,8 @@ import './search.scss'
 
 const { Search } = Input
 
-const SearchKit = ({setSearchWord}) => {
-
-  const setCurrentYears = (value) => {
+const SearchKit = ({ setSearchWord }) => {
+  const setCurrentYears = value => {
     setSearchWord(value)
   }
 
@@ -22,20 +17,14 @@ const SearchKit = ({setSearchWord}) => {
       <Search
         className="ui-kit__search"
         placeholder={SEARCH_DEFAULT_TEXT}
-        onSearch={value => setCurrentYears(value)}
+        onSearch={setCurrentYears}
       />
     </div>
   )
 }
 
-
-const mapDispatchToProps = {
-  setSearchWord
-}
-
 SearchKit.propTypes = {
-  setSearchWord: func.isRequired
+  setSearchWord: func.isRequired,
 }
 
-
-export default connect(null, mapDispatchToProps)(SearchKit)
+export default SearchKit

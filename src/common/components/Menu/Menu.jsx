@@ -2,14 +2,16 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Icon, Menu } from 'antd'
 
-import { SITE_NAME } from 'templates/constants'
 import { PATH_URL } from 'common/constants'
 import logo from 'assets/images/logo.png'
-import '../scss/Menu.scss'
+
+import { SITE_NAME } from '../../constants'
+
+import './Menu.scss'
 
 const { SubMenu } = Menu
 
-const { GALLERY } = PATH_URL
+const { IMAGE_GALLERY } = PATH_URL
 
 const MainMenu = () => {
   return (
@@ -22,7 +24,7 @@ const MainMenu = () => {
         </div>
         <Menu className="ui-kit__menu" mode="horizontal" theme="dark">
           <Menu.Item key="gallery">
-            <NavLink to={GALLERY}>
+            <NavLink to={IMAGE_GALLERY}>
               <Icon type="picture" />
               Gallery
             </NavLink>

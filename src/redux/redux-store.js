@@ -3,8 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import createDebounce from 'redux-debounced'
 
-import watchFetchingSaga from './saga/sagaImageDaily'
-import watchFetchingGallerySaga from './saga/sagaImagesGallery'
+import rootSaga from './saga'
 import rootReducers from './reducers'
 
 const initialState = {}
@@ -18,7 +17,6 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware)),
 )
 
-sagaMiddleware.run(watchFetchingSaga)
-sagaMiddleware.run(watchFetchingGallerySaga)
+sagaMiddleware.run(rootSaga)
 
 export default store

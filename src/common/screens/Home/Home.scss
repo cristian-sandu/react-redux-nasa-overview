@@ -1,7 +1,9 @@
 .wrapper {
-  width: 100%;
-  min-height: 650px;
-  background-color: #0088cc;
+  &__daily {
+    width: 100%;
+    min-height: 650px;
+    background-color: #0088cc;
+  }
   &__bg img {
     width: 100%;
     min-height: 650px;

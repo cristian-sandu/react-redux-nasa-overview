@@ -3,7 +3,7 @@ import { EMPTY_STRING } from 'common/constants'
 import { FETCH_IMAGES_SUCCESS, IS_LOADING } from '../types'
 
 const initialState = {
-  image: { EMPTY_STRING },
+  image: EMPTY_STRING,
   isLoading: false,
 }
 

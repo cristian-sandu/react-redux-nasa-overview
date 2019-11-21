@@ -4,29 +4,22 @@ import { imageAPI } from 'utils/axiosAPI/api'
 
 import { fetchImagesGallerySuccess, toggleIsLoading } from '../actions'
 import { REQUEST_IMAGES_GALLERY } from '../types'
-import {
-  getCurrentPage,
-  getEndYear,
-  getSearchText,
-  getStartYear,
-} from '../selectors'
+import { getSearchDetails } from '../selectors'
 
 function* fetchImagesGallery() {
   yield put(toggleIsLoading(true))
 
-  const searchText = yield select(getSearchText)
-  const page = yield select(getCurrentPage)
-  const yearStart = yield select(getStartYear)
-  const yearEnd = yield select(getEndYear)
+  const searchDetails = yield select(getSearchDetails)
+  const { searchText, pageIndex, yearStart, yearEnd } = searchDetails
 
-  const imagesItems = yield call(
+  const { items: imagesItems, metadata: totalItems } = yield call(
     imageAPI.getGallerySearchDef,
     searchText,
-    page,
+    pageIndex,
     yearStart,
     yearEnd,
   )
-  yield put(fetchImagesGallerySuccess(imagesItems))
+  yield put(fetchImagesGallerySuccess(imagesItems, totalItems))
 
   yield put(toggleIsLoading(false))
 }

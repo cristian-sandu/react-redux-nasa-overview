@@ -1,3 +1,5 @@
+import { EMPTY_STRING, EMPTY_ARRAY, EMPTY_OBJECT } from 'common/constants'
+
 import {
   FETCH_IMAGES_GALLERY_SUCCESS,
   IS_LOADING,
@@ -8,13 +10,13 @@ import {
 } from '../types'
 
 const initialState = {
-  items: [],
+  items: EMPTY_ARRAY,
+  totalItems: EMPTY_OBJECT,
   isLoading: false,
-  searchText: '',
+  searchText: EMPTY_STRING,
   yearStart: 1920,
   yearEnd: 2019,
-  page: 1,
-  totalPage: '',
+  pageIndex: 1,
 }
 
 const imagesGalleryReducer = (state = initialState, action) => {
@@ -23,6 +25,7 @@ const imagesGalleryReducer = (state = initialState, action) => {
       return {
         ...state,
         items: action.payload.imagesItems,
+        totalItems: action.payload.totalItems,
       }
     case IS_LOADING:
       return {
@@ -37,7 +40,7 @@ const imagesGalleryReducer = (state = initialState, action) => {
     case SET_CURRENT_PAGE:
       return {
         ...state,
-        page: action.payload.page,
+        pageIndex: action.payload.pageIndex,
       }
     case SET_CURRENT_YEARS_DATE:
       return {

@@ -33,6 +33,9 @@
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-wrap-multilines": 0,
+    "camelcase": [0, {"properties": "never"}],
+    "no-shadow": [0, { "allow": ["state"] }],
+    "global-require": 0,
     "react/jsx-filename-extension": [
       0
     ],
