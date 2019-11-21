@@ -1,9 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { Pagination } from 'antd'
-import { number } from 'prop-types'
-
-import { setCurrentPage } from 'redux/actions'
+import { func, number } from 'prop-types'
 
 import './pagination.scss'
 
@@ -25,17 +22,10 @@ const PaginationKit = ({ setCurrentPage, pageCurrent, totalPage }) => {
   )
 }
 
-const mapDispatchToProps = {
-  setCurrentPage,
-}
-
 PaginationKit.propTypes = {
-  setCurrentPage: number.isRequired,
+  setCurrentPage: func.isRequired,
   pageCurrent: number.isRequired,
   totalPage: number.isRequired,
 }
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(PaginationKit)
+export default PaginationKit

@@ -30,7 +30,7 @@ export const requestImages = () => ({
   type: REQUEST_IMAGES,
 })
 
-// Images Gallery
+// ImageGallery Gallery
 export const fetchImagesGallerySuccess = (imagesItems, totalItems) => ({
   type: FETCH_IMAGES_GALLERY_SUCCESS,
   payload: {

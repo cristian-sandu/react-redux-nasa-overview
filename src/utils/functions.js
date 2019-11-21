@@ -1,4 +1,4 @@
-import { ITEMS_PER_PAGES } from './constants'
+import { ITEMS_PER_PAGES } from '../common/constants'
 
 // Processing of images from array
 export function outImage(elements) {

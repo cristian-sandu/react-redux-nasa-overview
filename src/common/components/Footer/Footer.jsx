@@ -1,8 +1,8 @@
 import React from 'react'
 import { Icon } from 'antd'
 
-import '../scss/Footer.scss'
-import { COPY_TEXT } from '../constants'
+import './Footer.scss'
+import { COPY_TEXT } from '../../constants'
 
 const Footer = () => {
   return (
