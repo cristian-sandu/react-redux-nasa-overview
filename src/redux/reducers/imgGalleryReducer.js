@@ -1,4 +1,4 @@
-import { EMPTY_STRING, EMPTY_ARRAY } from 'common/constants'
+import { EMPTY_STRING, EMPTY_ARRAY, EMPTY_OBJECT } from 'common/constants'
 
 import {
   FETCH_IMAGES_GALLERY_SUCCESS,
@@ -11,7 +11,7 @@ import {
 
 const initialState = {
   items: EMPTY_ARRAY,
-  totalItems: 1,
+  totalItems: EMPTY_OBJECT,
   isLoading: false,
   searchText: EMPTY_STRING,
   yearStart: 1920,

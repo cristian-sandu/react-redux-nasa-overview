@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Row } from 'antd'
 
-import '../scss/Nasa.scss'
+import './Nasa.scss'
 
 const Nasa = () => (
   <div className="container">

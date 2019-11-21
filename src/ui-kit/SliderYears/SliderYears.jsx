@@ -1,11 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { func, number } from 'prop-types'
 import { Slider } from 'antd'
 
-import { getEndYear, getStartYear } from 'redux/selectors'
-import { setCurrentYearsDate, setCurrentYearsAfter } from 'redux/actions'
-import { getYear } from 'common/function'
+import { getYear } from 'utils/functions'
 
 import './sliderYears.scss'
 
@@ -40,23 +37,10 @@ const SliderYears = ({
   )
 }
 
-const mapStateToProps = state => ({
-  startYear: getStartYear(state),
-  endYear: getEndYear(state),
-})
-
-const mapDispatchToProps = {
-  setCurrentYearsDate,
-  setCurrentYearsAfter,
-}
-
 SliderYears.propTypes = {
   startYear: number.isRequired,
   endYear: number.isRequired,
   setCurrentYearsDate: func.isRequired,
   setCurrentYearsAfter: func.isRequired,
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(SliderYears)
+export default SliderYears
