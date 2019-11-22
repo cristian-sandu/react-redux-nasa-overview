@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 import { bool, func, string } from 'prop-types'
 
 import { Preloader } from 'ui-kit'
 import { requestImages } from 'redux/actions'
+import {
+  getDailyImageSelector,
+  getDailyImageIsLoadingSelector,
+} from 'redux/selectors/selectors'
 
 import Nasa from '../Nasa/Nasa'
 import './Home.scss'
@@ -27,9 +32,9 @@ const Header = ({ imageDaily, onImgFetch, isLoading }) => {
   )
 }
 
-const mapStateToProps = state => ({
-  imageDaily: state.imgDailyPage.image,
-  isLoading: state.imgDailyPage.isLoading,
+const mapStateToProps = createStructuredSelector({
+  imageDaily: getDailyImageSelector,
+  isLoading: getDailyImageIsLoadingSelector,
 })
 
 const mapDispatchToProps = {

@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import * as components from 'common/lazy-imports'
 import { Menu, Footer } from 'common/components'
 import { PATH_URL } from 'common/constants'
-import * as components from 'common/lazy-imports'
 import { Preloader } from 'ui-kit'
 
 import './App.scss'

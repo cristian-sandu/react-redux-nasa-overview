@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { bool, func, string, number, object, arrayOf, exact } from 'prop-types'
+import { createStructuredSelector } from 'reselect'
+import { bool, func, string, number, object, arrayOf } from 'prop-types'
 
 import {
   requestImagesGallery,
@@ -9,10 +10,17 @@ import {
   setCurrentPage,
   setSearchWord,
 } from 'redux/actions'
-import { getEndYear, getStartYear } from 'redux/selectors'
+import {
+  getCurrentPageSelector,
+  getEndYearSelector,
+  getImagesSelector,
+  getIsLoadingSelector,
+  getSearchTextSelector,
+  getStartYearSelector,
+  getTotalItemsOnPageSelector,
+} from 'redux/selectors/selectors'
 import { Preloader, Search, Pagination, SliderYears } from 'ui-kit'
 
-import { outImage, totalPage } from '../../../utils/functions'
 import './ImageGallery.scss'
 import ImageGallery from '../../components/ImageGallery/ImageGallery'
 
@@ -46,11 +54,6 @@ const ImagesGalleryScreen = ({
 
   if (isLoading) return <Preloader />
 
-  /* This should be in a reselect selector */
-  const image = outImage(images)
-
-  const { total_hits } = totalItems
-
   return (
     <div className="wrapper">
       <div className="wrapper__search">
@@ -62,24 +65,24 @@ const ImagesGalleryScreen = ({
           endYear={endYear}
         />
       </div>
-      <ImageGallery sourceImage={image} />
+      <ImageGallery sourceImage={images} />
       <Pagination
         setCurrentPage={setCurrentPage}
-        totalPage={totalPage(total_hits)}
+        totalPage={totalItems}
         pageCurrent={pageIndex}
       />
     </div>
   )
 }
 
-const mapStateToProps = state => ({
-  images: state.imagesGalleryPage.items,
-  isLoading: state.imagesGalleryPage.isLoading,
-  searchText: state.imagesGalleryPage.searchText,
-  pageIndex: state.imagesGalleryPage.pageIndex,
-  startYear: getStartYear(state),
-  endYear: getEndYear(state),
-  totalItems: state.imagesGalleryPage.totalItems,
+const mapStateToProps = createStructuredSelector({
+  isLoading: getIsLoadingSelector,
+  searchText: getSearchTextSelector,
+  pageIndex: getCurrentPageSelector,
+  startYear: getStartYearSelector,
+  endYear: getEndYearSelector,
+  images: getImagesSelector,
+  totalItems: getTotalItemsOnPageSelector,
 })
 
 const mapDispatchToProps = {
@@ -92,9 +95,7 @@ const mapDispatchToProps = {
 
 ImagesGalleryScreen.propTypes = {
   images: arrayOf(object).isRequired,
-  totalItems: exact({
-    total_hits: number,
-  }).isRequired,
+  totalItems: number.isRequired,
   searchText: string.isRequired,
   isLoading: bool.isRequired,
   pageIndex: number.isRequired,
