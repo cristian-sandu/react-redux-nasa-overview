@@ -3,6 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import createDebounce from 'redux-debounced'
 import { persistStore, persistReducer } from 'redux-persist'
+import { createBlacklistFilter } from 'redux-persist-transform-filter'
 import storage from 'redux-persist/lib/storage'
 
 import rootSaga from './saga'
@@ -15,7 +16,16 @@ const middleware = [sagaMiddleware, debounceMiddleware]
 const persistConfig = {
   key: 'root',
   storage,
+  transforms: [
+    createBlacklistFilter('imgDailyPage', ['image']),
+    createBlacklistFilter('imagesGalleryPage', [
+      'items',
+      'totalItems',
+      'pageIndex',
+    ]),
+  ],
 }
+
 const persistedReducer = persistReducer(persistConfig, rootReducers)
 
 const store = createStore(
