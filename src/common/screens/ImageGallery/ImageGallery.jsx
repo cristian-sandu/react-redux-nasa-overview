@@ -53,7 +53,6 @@ const ImagesGalleryScreen = ({
   ])
 
   if (isLoading) return <Preloader />
-
   return (
     <div className="wrapper">
       <div className="wrapper__search">

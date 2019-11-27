@@ -31,7 +31,6 @@ const Header = ({ imageDaily, onImgFetch, isLoading }) => {
     </div>
   )
 }
-
 const mapStateToProps = createStructuredSelector({
   imageDaily: getDailyImageSelector,
   isLoading: getDailyImageIsLoadingSelector,
