@@ -1,6 +1,9 @@
 // Axios constant
 export const API_KEY = 'api_key=aCNwLvVe8gykdUxPUggWkOt3lB3RzzHoVHTy4ZQZ'
 
+// General
+export const ITEM_KEY = 'History copy with Middleware'
+
 // Home
 export const SITE_NAME = 'Nasa'
 export const COPY_TEXT =

@@ -8,7 +8,7 @@ import {
   SET_CURRENT_YEARS_AFTER,
   SET_CURRENT_YEARS_DATE,
   SET_SEARCH_WORD,
-} from '../types'
+} from 'redux/types'
 
 // Loading bar
 export const toggleIsLoading = isLoading => ({
@@ -49,6 +49,9 @@ export const setSearchWord = searchText => ({
   payload: {
     searchText,
   },
+  meta: {
+    persist: true,
+  },
 })
 
 // Pagination
@@ -56,6 +59,9 @@ export const setCurrentPage = pageIndex => ({
   type: SET_CURRENT_PAGE,
   payload: {
     pageIndex,
+  },
+  meta: {
+    persist: true,
   },
 })
 
@@ -69,6 +75,7 @@ export const setCurrentYearsDate = yearStart => ({
     debounce: {
       time: 500,
     },
+    persist: true,
   },
 })
 
@@ -76,5 +83,8 @@ export const setCurrentYearsAfter = yearEnd => ({
   type: SET_CURRENT_YEARS_AFTER,
   payload: {
     yearEnd,
+  },
+  meta: {
+    persist: true,
   },
 })
