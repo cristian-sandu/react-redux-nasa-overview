@@ -10,12 +10,14 @@ import {
 } from 'redux-persist-transform-filter'
 import storage from 'redux-persist/lib/storage'
 
+import localStorageMiddleware from 'redux/middlewares/localStorage'
+
 import rootSaga from './saga'
 import rootReducers from './reducers'
 
 const sagaMiddleware = createSagaMiddleware()
 const debounceMiddleware = createDebounce()
-const middleware = [sagaMiddleware, debounceMiddleware]
+const middleware = [sagaMiddleware, debounceMiddleware, localStorageMiddleware]
 
 const persistConfig = {
   key: 'root',
